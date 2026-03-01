@@ -1,72 +1,93 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Medium Hero Clone</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      body {
-        font-family: 'Georgia', serif;
-        background-color: #f7f4ed;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medium – Where good ideas find you.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mediumBeige: '#f7f4ed',
+            mediumDark: '#242424',
+          },
+          fontFamily: {
+            serif: ['"Times New Roman"', 'Times', 'serif'],
+            sans: ['"Roboto"', 'system-ui', 'sans-serif'],
+          }
+        }
       }
-    </style>
-  </head>
-  <body class="text-[#242424] m-0 p-0">
+    }
+  </script>
+</head>
+<body class="font-sans text-mediumDark bg-white m-0 p-0 antialiased overflow-x-hidden">
 
-  <!-- Header -->
-  <header class="flex justify-between items-center pr-6 md:pr-[72px] pl-6 md:pl-[120px] py-4 border-b border-black">
+  <!-- Header & Hero Section Wrapper -->
+  <div class="bg-mediumBeige border-b border-black w-full flex flex-col">
+    
+    <!-- Header -->
+    <header class="border-b border-black">
+      <div class="max-w-screen-2xl mx-auto w-full flex justify-between items-center px-5 md:px-10 lg:px-20 py-4 h-[75px]">
+        <!-- Logo -->
+        <a href="#" class="text-[32px] md:text-[36px] font-serif font-bold text-black tracking-tighter" style="font-family: 'Georgia', serif;">Medium</a>
+        
+        <!-- Navigation -->
+        <nav class="flex items-center gap-6 text-[14px]">
+          <a href="#" class="hidden md:inline-block hover:text-black text-gray-800 transition-colors">Our story</a>
+          <a href="#" class="hidden md:inline-block hover:text-black text-gray-800 transition-colors">Membership</a>
+          <a href="#" class="hidden md:inline-block hover:text-black text-gray-800 transition-colors">Write</a>
+          <a href="#" class="hidden sm:inline-block hover:text-black text-gray-800 transition-colors">Sign in</a>
+          <a href="#" class="bg-black text-white px-4 py-[10px] rounded-full font-medium hover:bg-gray-800 transition-colors">Get started</a>
+        </nav>
+      </div>
+    </header>
 
-    <div class="text-3xl font-bold font-serif">Medium</div>
-    <nav class="hidden md:flex items-center space-x-6 text-sm">
-      <a href="#" class="hover:underline">Our story</a>
-      <a href="#" class="hover:underline">Membership</a>
-      <a href="#" class="hover:underline">Write</a>
-      <a href="#" class="hover:underline">Sign in</a>
-      <a href="#" class="bg-black text-white px-4 py-2 rounded-full font-semibold">Get started</a>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <main class="flex flex-col md:flex-row md:h-[calc(100vh-160px)] bg-[#f7f4ed]">
-
-    <!-- Left Text Block -->
-    <div class="flex-1 flex items-center pl-6 pr-6 md:pl-[120px] md:pr-[72px]">
-      <div>
-        <h1 class="text-[60px] md:text-[84px] font-serif font-medium leading-[1.1] mb-6 text-[#242424]">
+    <!-- Hero Section -->
+    <main class="max-w-screen-2xl mx-auto w-full flex flex-col md:flex-row min-h-[calc(100vh-75px)]">
+      
+      <!-- Left Text Block -->
+      <div class="w-full md:w-[60%] lg:w-[55%] flex flex-col justify-center items-start px-5 md:px-10 lg:px-20 py-16 md:py-12">
+        <h1 class="text-[65px] sm:text-[80px] md:text-[85px] lg:text-[106px] font-serif font-medium leading-[0.95] mb-8 text-black tracking-tighter w-full">
           Human <br />
           stories & ideas
         </h1>
-        <p class="text-xl text-[#242424] mb-6">A place to read, write, and deepen your understanding</p>
-        <button class="bg-black text-white px-6 py-3 rounded-full text-base font-semibold">
+        <p class="text-xl md:text-2xl text-mediumDark mb-10 md:mb-12 max-w-md" style="font-family: 'system-ui', sans-serif;">
+          A place to read, write, and deepen your understanding
+        </p>
+        <button class="bg-black text-white px-8 md:px-10 py-2.5 md:py-3 rounded-full text-xl font-medium hover:bg-gray-800 transition-colors">
           Start reading
         </button>
       </div>
-    </div>
 
-    <!-- Right Hero Image -->
-  <div class="flex-1">
-    <img 
-  src="https://miro.medium.com/v2/format:webp/4*SdjkdS98aKH76I8eD0_qjw.png" 
-  alt="Hero" 
-  class="w-full h-auto md:h-full object-cover md:object-contain md:object-right"
-/>
+      <!-- Right Hero Image -->
+      <div class="w-full md:w-[40%] lg:w-[45%] flex items-center justify-end overflow-hidden border-t border-black md:border-none">
+        <img 
+          src="https://miro.medium.com/v2/format:webp/4*SdjkdS98aKH76I8eD0_qjw.png" 
+          alt="Hero Illustration" 
+          class="w-full h-[300px] md:h-full object-cover md:object-contain object-right"
+        />
+      </div>
+    </main>
   </div>
-  </main>
 
   <!-- Footer -->
-  <footer class="text-center text-sm text-gray-600 py-6 px-6 md:px-[120px] mt-12 border-t border-black">
-    <div class="flex flex-wrap justify-center gap-4">
-      <a href="#">Help</a>
-      <a href="#">Status</a>
-      <a href="#">About</a>
-      <a href="#">Careers</a>
-      <a href="#">Press</a>
-      <a href="#">Blog</a>
-      <a href="#">Privacy</a>
-      <a href="#">Rules</a>
-      <a href="#">Terms</a>
-      <a href="#">Text to speech</a>
+  <footer class="bg-white text-center text-[13px] text-gray-500 py-6 px-6">
+    <div class="flex flex-wrap justify-center gap-x-5 gap-y-3 max-w-screen-2xl mx-auto">
+      <a href="#" class="hover:text-black transition-colors">Help</a>
+      <a href="#" class="hover:text-black transition-colors">Status</a>
+      <a href="#" class="hover:text-black transition-colors">About</a>
+      <a href="#" class="hover:text-black transition-colors">Careers</a>
+      <a href="#" class="hover:text-black transition-colors">Press</a>
+      <a href="#" class="hover:text-black transition-colors">Blog</a>
+      <a href="#" class="hover:text-black transition-colors">Privacy</a>
+      <a href="#" class="hover:text-black transition-colors">Terms</a>
+      <a href="#" class="hover:text-black transition-colors">Text to speech</a>
+      <a href="#" class="hover:text-black transition-colors">Teams</a>
     </div>
   </footer>
 
