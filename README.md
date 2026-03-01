@@ -55,4 +55,4 @@ Untuk project web Single Page Application yang menggunakan **React** dan **Vite*
 
 ---
 
-*Didikasikan untuk perjalanan belajar front-end di Chevalier Lab!* ✨
+*Dibuat untuk perjalanan belajar front-end di Chevalier Lab!* ✨
